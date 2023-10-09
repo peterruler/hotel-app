@@ -3,3 +3,6 @@ npm install -g @angular/cli
 ng new hotel-app
 npm install
 ng generate component footer
+ng generate module app-routing --flat --module=app
+
+
