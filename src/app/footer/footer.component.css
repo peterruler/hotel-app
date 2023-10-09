@@ -1,0 +1,10 @@
+footer.footer {
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    background: rgba(149, 110, 118, 0.3) !important;
+}
+
+a {
+    text-decoration: none;
+}

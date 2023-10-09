@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg bg-secondary navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand">Hotel App</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,13 +21,12 @@
 </nav>
 
 <div class="container pt-5">
-
-  <div class="h-100 p-5 bg-dark text-white  rounded-3 text-center">
+  <div class="h-100 p-5 rounded-3 text-center bg-light bg-transparent">
     <div class="display-4">{{title}}</div>
   </div>
 
   <hr>
   
   <router-outlet></router-outlet>
-
 </div>
+<app-footer></app-footer>

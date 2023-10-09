@@ -10,13 +10,15 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { EventSignupComponent } from './event-signup/event-signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookingsComponent,
     CreateBookingComponent,
-    EventSignupComponent
+    EventSignupComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

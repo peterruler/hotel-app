@@ -1,5 +1,5 @@
 <form #formSignup="ngForm">
-    <div class="card text-white bg-dark">
+    <div class="card bg-secondary">
         <div class="card-header">
             <h5>Event Benachrichtigung</h5>
         </div>  
@@ -31,7 +31,7 @@
         </div>  
 
         <div class="card-footer">
-            <button [disabled]="formSignup.invalid" (click)="onSubmit()" class="btn btn-primary">Eintragen</button>
+            <button [disabled]="formSignup.invalid" (click)="onSubmit()" class="btn btn-secondary">Eintragen</button>
         </div>
     </div>
 </form>
