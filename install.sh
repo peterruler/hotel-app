@@ -9,3 +9,5 @@ ng generate service booking
 npm install angular-in-memory-web-api
 ng generate service InMemoryData
 
+# free stock  photos: pixabay.com
+
