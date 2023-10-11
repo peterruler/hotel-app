@@ -1,35 +1,42 @@
 @media screen {
     .container p,
     .container small {
-        color: #000 !important;
+        color: #000;
     }
 
     .container a,
     a:link {
-        color: #000 !important;
+        color: #000;
     }
 
     .container a:visited {
-        color: #000 !important;
+        color: #000;
     }
 
     .container a:hover {
-        color: #000 !important;
+        color: #000;
     }
 
     .container a:active {
-        color: #000 !important;
+        color: #000;
     }
 
     .container button.btn-sm {
-        padding: 0.15rem 0.5rem !important;
+        padding: 0.15rem 0.5rem;
     }
 
     .container .list-group-item {
-        background: rgba(255, 255, 255, 0.7) !important;
+        background: rgba(255, 255, 255, 0.7);
     }
 
-    .bg-secondary {
+    .container .list-group-item a,
+    .container .list-group-item a:visited,
+    .container .list-group-item a:hover,
+    .container .list-group-item a:active {
+        color:#623d3b;
+    }
+
+    .container .card.bg-secondary {
         background: rgba(255, 255, 255, 0.7) !important;
     }
 
@@ -37,7 +44,7 @@
         bottom: 0px;
         position: fixed;
         width: 100%;
-        background: rgba(149, 110, 118, 0.3) !important;
+        background: rgba(149, 110, 118, 0.3);
     }
 
     .footer a,
@@ -45,6 +52,6 @@
     .footer a:hover,
     .footer a:active {
         text-decoration: none;
-        color: #fff !important;
+        color: #fff;
     }
 }
