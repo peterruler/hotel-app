@@ -11,3 +11,4 @@ ng generate service InMemoryData
 
 # free stock  photos: pixabay.com
 
+ng generate component EventSignup

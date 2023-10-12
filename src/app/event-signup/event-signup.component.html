@@ -1,5 +1,5 @@
 <form #formSignup="ngForm">
-    <div class="card bg-secondary">
+    <div [class.bg-warning]="formSignup.invalid" [class.bg-secondary]="formSignup.valid" class="card">
         <div class="card-header">
             <h5>Event Benachrichtigung</h5>
         </div>  
