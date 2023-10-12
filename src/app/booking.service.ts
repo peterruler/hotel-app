@@ -11,7 +11,7 @@ export class BookingService {
 
   constructor(private httpClient:HttpClient) { }
 
-  bookingsUrl :string = "/api/bookings";
+  bookingsUrl :string = "http://127.0.0.1:3000/api/bookings";
 
   getBookings() : Observable<Booking[]>{
     var response = this.httpClient.get<Booking[]>(this.bookingsUrl);

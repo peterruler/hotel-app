@@ -25,3 +25,44 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Paylooad
+```
+   {
+        "id" : 1,
+        "name": "Peter S",
+        "roomNumber": 100,
+        "startDate": "2023-10-12 00:00:00",
+        "endDate": "2023-10-12 00:00:00"
+    }
+```
+
+- `docker exec -it mongo-arm-mongo-container-1 bash`
+- `mongosh --port 27017 -u root -p 'example' --authenticationDatabase 'admin'`
+```
+use myFirstDatabase
+db.createUser(
+  {
+    user: "root",
+    pwd: "example",
+    roles: [ "readWrite", "dbAdmin" ]
+  }
+)
+```
+- `db.createCollection("bookings")`
+
+```
+sudo docker stop mongo-arm-web-1
+sudo docker rm  mongo-arm-web-1
+sudo docker-compose build
+sudo docker-compose up -d
+```
+
+```
+In environment.ts file set production to true
+export const environment = {
+  production: true
+};
+```
+
+

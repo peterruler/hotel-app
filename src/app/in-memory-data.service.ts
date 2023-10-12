@@ -5,10 +5,12 @@ import { Booking } from './booking';
 @Injectable({
   providedIn: 'root'
 })
+
 export class InMemoryDataService implements InMemoryDbService  {
 
   createDb() {
     const bookings: Booking[] = [
+
       {
           id : 1,
           name: "Jannick Leismann",
@@ -38,8 +40,9 @@ export class InMemoryDataService implements InMemoryDbService  {
           endDate: new Date("2021-08-11")
       }
     ]
-
+    
     return {bookings};
+ 
   }
 
   constructor() { }
