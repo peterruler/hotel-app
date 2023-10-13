@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Booking } from './booking';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Bookings } from './--mock-bookings';
 
 @Injectable({
   providedIn: 'root'
@@ -28,8 +29,15 @@ export class BookingService {
     return response;
   }
 
+
   addBooking(booking: Booking) : Observable<Booking> {
     var response = this.httpClient.post<Booking>(this.bookingsUrl, booking);
     return response;
   }
+
+  updateBooking(booking: Booking) : Observable<Booking> {
+    var response = this.httpClient.put<Booking>(this.bookingsUrl, booking);
+    return response;
+  }
+
 }

@@ -62,8 +62,40 @@ export class CreateBookingComponent implements OnInit {
     this.booking.startDate = this.bookingForm.get('startDate')?.value;
     this.booking.endDate = this.bookingForm.get('endDate')?.value;
 
-    this.bookingService.addBooking(this.booking).subscribe();  
+   if(this.router.url != '/create'){
+      this.bookingService.updateBooking(this.booking).subscribe((result)=> {
+        this.booking = result;
+      });
+
+      this.bookingForm.setValue(
+        {
+          id: this.booking.id,
+          roomNumber: this.booking.roomNumber,
+          name: this.booking.name,
+          startDate: this.booking.startDate,
+          endDate : this.booking.endDate
+        }
+      );
+
+      this.router.navigate(['bookings']);
+    } else {
+      this.bookingService.addBooking(this.booking).subscribe((result)=> {
+        this.booking = result;
+      }); 
+
+      this.bookingForm.setValue(
+        {
+          id: this.booking.id,
+          roomNumber: this.booking.roomNumber,
+          name: this.booking.name,
+          startDate: this.booking.startDate,
+          endDate : this.booking.endDate
+        }
+      );
+      this.router.navigate(['bookings']);
+    }  
     this.router.navigate(['bookings']);
+    this.bookingService.getBookings().subscribe(() => {});
   }
 
   dateChanged(event: Event, isStart: boolean){
