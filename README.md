@@ -65,4 +65,7 @@ export const environment = {
 };
 ```
 
+# Demo
 
+- requests might be queued after webserver inactivity. Please be patient until the site is ready.
+- https://hotel-app-qkpu.onrender.com/bookings
