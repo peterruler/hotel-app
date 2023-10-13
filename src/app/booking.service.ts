@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Booking } from './booking';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Bookings } from './--mock-bookings';
+// import { Bookings } from './--mock-bookings';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class BookingService {
 
   constructor(private httpClient:HttpClient) { }
 
-  bookingsUrl :string = "http://127.0.0.1:3000/api/bookings";
+  bookingsUrl :string = "https://keepitnative.xyz/api/bookings";
 
   getBookings() : Observable<Booking[]>{
     var response = this.httpClient.get<Booking[]>(this.bookingsUrl);
