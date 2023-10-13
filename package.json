@@ -6,7 +6,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve cross-env NODE_OPTIONS='--openssl-legacy-provider --inspect' next dev",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": ""
