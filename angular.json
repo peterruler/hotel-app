@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "hotel-app"
+  "defaultProject": "hotel-app",
+  "cli": {
+    "analytics": false
+  }
 }
