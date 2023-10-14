@@ -9,8 +9,6 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: './create-booking.component.html',
   styleUrls: ['./create-booking.component.css'],
 })
-
-
 export class CreateBookingComponent implements OnInit {
   constructor(
     private router: Router,
@@ -73,12 +71,10 @@ export class CreateBookingComponent implements OnInit {
           startDate: this.booking.startDate,
           endDate: this.booking.endDate,
         });
-        setTimeout(function () {
-          const originalUrl = location.href;
-          const modifiedUrl = originalUrl.replace("/bookings", "");
-          history.pushState({ path: modifiedUrl }, "", modifiedUrl);
-          window.location.reload();
-        }, 200);
+        const originalUrl = location.href;
+        const modifiedUrl = originalUrl.replace('/bookings', '');
+        history.pushState({ path: modifiedUrl }, '', modifiedUrl);
+        window.location.reload();
       });
     } else {
       this.bookingService.addBooking(this.booking).subscribe((result) => {
