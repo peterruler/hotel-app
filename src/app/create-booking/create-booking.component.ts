@@ -74,10 +74,11 @@ export class CreateBookingComponent implements OnInit {
           endDate: this.booking.endDate,
         });
         setTimeout(function () {
-          const url = "https://hotel-app-qkpu.onrender.com/"; 
-          history.pushState({ path: url }, "", url);
+          const originalUrl = location.href;
+          const modifiedUrl = originalUrl.replace("/bookings", "");
+          history.pushState({ path: modifiedUrl }, "", modifiedUrl);
           window.location.reload();
-        }, 1000);
+        }, 200);
       });
     } else {
       this.bookingService.addBooking(this.booking).subscribe((result) => {
