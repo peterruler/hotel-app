@@ -9,6 +9,8 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: './create-booking.component.html',
   styleUrls: ['./create-booking.component.css'],
 })
+
+
 export class CreateBookingComponent implements OnInit {
   constructor(
     private router: Router,
@@ -72,7 +74,9 @@ export class CreateBookingComponent implements OnInit {
           endDate: this.booking.endDate,
         });
         setTimeout(function () {
-          location.reload();
+          const url = "https://hotel-app-qkpu.onrender.com/"; 
+          history.pushState({ path: url }, "", url);
+          window.location.reload();
         }, 1000);
       });
     } else {
