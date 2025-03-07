@@ -77,6 +77,6 @@ export const environment = {
 ```
 
 ## Demo
-
+- Leider ist der Datenbank Backend Server nicht mehr länger online - die App kann mit [Rest Server](https://github.com/peterruler/mongo-arm) lokal genutzt werden.
 - Anfragen können nach Inaktivität des Webservers in die Warteschlange gestellt werden. Bitte haben Sie Geduld, bis die Seite bereit ist.
 - [https://hotel-app-qkpu.onrender.com](https://hotel-app-qkpu.onrender.com)
